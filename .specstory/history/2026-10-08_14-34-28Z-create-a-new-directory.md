@@ -408,3 +408,468 @@ _**Agent (claude-sonnet-5-5 2026-10-08 14:43:18Z)**_
 _**Agent (claude-sonnet-5-5 2026-10-08 14:43:20Z)**_
 
 All three project links now open in a new tab. They use `target="_blank"` with `rel="noopener noreferrer"`. I left the "← Home" link as it was, so it opens in the same tab. The change is live and needs no nginx reload.
+
+---
+
+_**User (2026-10-08 14:50:29Z)**_
+
+improve the visual impact of /projects. Add suitable thumnails for each item. Use a font and color scheme similar to the resume home page.
+
+---
+
+_**Agent (claude-sonnet-5-5 2026-10-08 14:50:32Z)**_
+
+<tool-use data-tool-type="shell" data-tool-name="Bash"><details>
+<summary>Tool use: **Bash**</summary>
+
+`curl -s https://johnpretsch.com/ | head -c 6000; which chromium chromium-browser google-chrome wkhtmltoimage 2>/dev/null; python3 -c "import PIL;print('pil')"`
+
+```text
+Exit code 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="John Pretsch — Senior Programmer Analyst, Consultant, Enterprise Web Application Developer">
+  <title>John Pretsch — Senior Software Engineer</title>
+  <style>
+    :root {
+      --text: #20252b;
+      --muted: #5d6670;
+      --accent: #1f5f8b;
+      --accent-dark: #164766;
+      --rule: #dfe4e8;
+      --surface: #f5f7f9;
+      --max-width: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+
+    header {
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+    }
+
+    .name {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 750;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 14px 0;
+    }
+
+    .title {
+      margin: 8px 0 14px;
+      color: var(--accent);
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+      font-weight: 600;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact span:not(:last-child)::after {
+      content: "•";
+      margin-left: 18px;
+      color: #a7afb7;
+    }
+
+    section {
+      margin-top: 32px;
+    }
+
+    .section-heading {
+      margin: 0 0 15px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent-dark);
+      font-size: 1.05rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-weight: 750;
+    }
+
+    .summary {
+      margin: 0;
+      max-width: 900px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 26px;
+    }
+
+    .skill {
+      margin: 0;
+    }
+
+    .skill strong {
+      display: block;
+      margin-bottom: 2px;
+      color: #252c33;
+    }
+
+    .job {
+      margin-bottom: 28px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .job-title {
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .dates {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 0.94rem;
+      white-space: nowrap;
+    }
+
+    .job-location {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 7px;
+    }
+
+    ul {
+      margin: 7px 0 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin: 5px 0;
+      padding-left: 2px;
+    }
+
+    .highlights {
+      display: grid;
+      gap: 13px;
+    }
+
+    .highlight {
+      margin: 0;
+    }
+
+    .highlight strong {
+      color: #252c33;
+    }
+
+    .education {
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 24px, var(--max-width));
+        padding-top: 28px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .job-header {
+        display: block;
+      }
+
+      .dates {
+        display: block;
+        margin-top: 3px;
+      }
+
+      .contact {
+        display: block;
+      }
+
+      .contact span {
+        display: block;
+        margin: 2px 0;
+      }
+
+      .contact span:not(:last-child)::after {
+        display: none;
+      }
+
+      section {
+        margin-top: 27px;
+      }
+    }
+
+    @media print {
+      @page {
+        size: letter;
+        margin: 0.55in;
+      }
+
+      body {
+        font-size: 10.5pt;
+        line-height: 1.42;
+      }
+
+      .page {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+      }
+
+      header {
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+      }
+
+      section {
+        margin-top: 19px;
+      }
+
+      .job {
+        margin-bottom: 17px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .section-heading {
+        break-after: avoid;
+      }
+
+      .job,
+      .highlight,
+      .skill {
+        break-inside: avoid;
+      }
+
+      footer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header>
+      <h1 class="name">John Pretsch</h1>
+      <p><img class="profile-photo" src="https://myeverything.jepflow.io/api/assets/images/profile-12.png" alt="John Pretsch"></p>
+      <p class="title">Senior Programmer Analyst | Consultant | Enterprise Web Application Developer</p>
+      <div class="contact" aria-label="Contact information">
+        <span><a href="https://johnpretsch.com/projects">johnpretsch.com/projects</a></span>
+        <span><a href="mailto:john@johnpretsch.com">john@johnpretsch.com</a></span>
+        <span><a href="https://linkedin.com/in/john-pretsch-39b20074">linkedin.com/in/john-pretsch-39b20074</a></span>
+      </div>
+    </header>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading" class="section-heading">Professional Summary</h2>
+      <p class="summary">
+        Senior software engineer with 20 years of experience building, improving, and Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'PIL'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 114, in apport_excepthook
+    report["ExecutableTimestamp"] = str(int(os.stat(binary).st_mtime))
+                                            ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/johnpretsch.com/-c'
+
+Original exception was:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'PIL'
+```
+</details></tool-use>
+
+_**Agent (claude-sonnet-5-5 2026-10-08 14:50:54Z)**_
+
+<tool-use data-tool-type="shell" data-tool-name="Bash"><details>
+<summary>Tool use: **Bash**</summary>
+
+```bash
+cd /var/www/johnpretsch.com/public/projects && mkdir -p img && cd img
+cat > news.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="News feed">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f5f8b"/><stop offset="1" stop-color="#164766"/></linearGradient></defs>
+<rect width="400" height="240" fill="url(#g)"/>
+<g fill="#fff">
+<rect x="40" y="36" width="320" height="52" rx="6" fill-opacity=".95"/>
+<rect x="40" y="100" width="320" height="52" rx="6" fill-opacity=".85"/>
+<rect x="40" y="164" width="320" height="40" rx="6" fill-opacity=".7"/>
+</g>
+<g fill="#1f5f8b">
+<rect x="52" y="48" width="44" height="28" rx="4"/><rect x="108" y="50" width="190" height="8" rx="4"/><rect x="108" y="66" width="130" height="6" rx="3" fill-opacity=".5"/>
+<rect x="52" y="112" width="44" height="28" rx="4"/><rect x="108" y="114" width="210" height="8" rx="4"/><rect x="108" y="130" width="150" height="6" rx="3" fill-opacity=".5"/>
+<rect x="52" y="176" width="44" height="16" rx="4"/><rect x="108" y="178" width="170" height="8" rx="4"/>
+</g>
+</svg>
+EOF
+cat > market.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Market chart">
+<rect width="400" height="240" fill="#164766"/>
+<g stroke="#fff" stroke-opacity=".15"><path d="M30 50H370M30 100H370M30 150H370M30 200H370"/></g>
+<g fill="#fff" fill-opacity=".25"><rect x="50" y="150" width="22" height="50"/><rect x="95" y="130" width="22" height="70"/><rect x="140" y="140" width="22" height="60"/><rect x="185" y="105" width="22" height="95"/><rect x="230" y="115" width="22" height="85"/><rect x="275" y="80" width="22" height="120"/><rect x="320" y="60" width="22" height="140"/></g>
+<polyline points="61,140 106,115 151,125 196,85 241,95 286,60 331,38" fill="none" stroke="#7fc4f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="331" cy="38" r="7" fill="#fff"/>
+</svg>
+EOF
+cat > food.svg <<'EOF'
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Food plate">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a7ab0"/><stop offset="1" stop-color="#1f5f8b"/></linearGradient></defs>
+<rect width="400" height="240" fill="url(#g)"/>
+<circle cx="200" cy="120" r="86" fill="#fff"/>
+<circle cx="200" cy="120" r="64" fill="#f5f7f9" stroke="#dfe4e8" stroke-width="3"/>
+<path d="M180 120a20 20 0 0 1 40 0z" fill="#1f5f8b"/><circle cx="214" cy="132" r="12" fill="#7fc4f0"/><rect x="172" y="128" width="30" height="10" rx="5" fill="#164766"/>
+<g fill="#fff"><rect x="76" y="50" width="6" height="60" rx="3"/><rect x="66" y="50" width="4" height="30" rx="2"/><rect x="88" y="50" width="4" height="30" rx="2"/><rect x="76" y="110" width="6" height="80" rx="3"/>
+<path d="M322 50c14 10 14 50 0 60v80h-6V50z"/></g>
+</svg>
+EOF
+cd .. && python3 - <<'EOF'
+import re
+p='index.html'
+s=open(p).read()
+css='''  :root { --text:#20252b; --muted:#5d6670; --accent:#1f5f8b; --accent-dark:#164766; --rule:#dfe4e8; --surface:#f5f7f9; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--text); font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.58; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover, a:focus { color:var(--accent-dark); text-decoration:underline; }
+  .page { width:min(100% - 32px, 980px); margin:0 auto; padding:42px 0 56px; }
+  header { border-bottom:3px solid var(--accent); padding-bottom:24px; margin-bottom:30px; }
+  .back { font-size:.9rem; color:var(--muted); }
+  h1 { margin:10px 0 0; font-size:clamp(2rem,5vw,3rem); line-height:1.05; letter-spacing:-.03em; font-weight:750; }
+  .tagline { margin:8px 0 0; color:var(--accent); font-size:clamp(1.05rem,2.5vw,1.3rem); font-weight:600; }
+  .section-heading { margin:0 0 18px; padding-bottom:7px; border-bottom:1px solid var(--rule); color:var(--accent-dark); font-size:1.05rem; letter-spacing:.09em; text-transform:uppercase; font-weight:750; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:24px; list-style:none; margin:0; padding:0; }
+  .card { display:flex; flex-direction:column; height:100%; color:inherit; background:#fff; border:1px solid var(--rule); border-radius:8px; overflow:hidden; transition:box-shadow .15s, transform .15s, border-color .15s; }
+  .card:hover, .card:focus { text-decoration:none; color:inherit; border-color:var(--accent); box-shadow:0 8px 22px rgba(22,71,102,.15); transform:translateY(-3px); }
+  .card img { display:block; width:100%; aspect-ratio:5/3; object-fit:cover; border-bottom:3px solid var(--accent); }
+  .body { padding:16px 18px 20px; }
+  .card h2 { margin:0 0 6px; font-size:1.2rem; line-height:1.3; color:var(--accent-dark); }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  .visit { display:inline-block; margin-top:12px; color:var(--accent); font-weight:600; font-size:.9rem; }
+  footer { margin-top:42px; padding-top:18px; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+'''
+s=re.sub(r'<style>.*?</style>','<style>\n'+css+'</style>',s,flags=re.S)
+body='''<main class="page">
+<header>
+  <a class="back" href="/">&larr; John Pretsch</a>
+  <h1>Projects</h1>
+  <p class="tagline">Web applications I've designed and built</p>
+</header>
+<h2 class="section-heading">Featured</h2>
+<ul class="grid">
+  <li><a class="card" target="_blank" rel="noopener noreferrer" href="https://myeverything.jepflow.io/news">
+    <img src="img/news.svg" alt="" width="400" height="240">
+    <div class="body"><h2>myeverything: News</h2>
+    <p>A searchable, filterable news feed aggregated in one place, part of my personal "myeverything" dashboard.</p>
+    <span class="visit">Visit &rarr;</span></div></a></li>
+  <li><a class="card" target="_blank" rel="noopener noreferrer" href="https://myeverything.jepflow.io/market">
+    <img src="img/market.svg" alt="" width="400" height="240">
+    <div class="body"><h2>myeverything: Market</h2>
+    <p>A market information page showing up-to-date market data, also part of the myeverything dashboard.</p>
+    <span class="visit">Visit &rarr;</span></div></a></li>
+  <li><a class="card" target="_blank" rel="noopener noreferrer" href="https://myfood.jepflow.io/">
+    <img src="img/food.svg" alt="" width="400" height="240">
+    <div class="body"><h2>MyFood</h2>
+    <p>A web app for keeping track of food.</p>
+    <span class="visit">Visit &rarr;</span></div></a></li>
+</ul>
+<footer>&copy; John Pretsch</footer>
+</main>
+'''
+s=re.sub(r'<body>.*</body>','<body>\n'+body+'</body>',s,flags=re.S)
+open(p,'w').write(s)
+EOF
+chmod -R a+rX . ; for f in projects/ projects/img/news.svg projects/img/market.svg projects/img/food.svg; do curl -s -o /dev/null -w "$f %{http_code} %{content_type}\n" https://johnpretsch.com/$f; done
+```
+
+```text
+projects/ 200 text/html
+projects/img/news.svg 200 image/svg+xml
+projects/img/market.svg 200 image/svg+xml
+projects/img/food.svg 200 image/svg+xml
+```
+</details></tool-use>
+
+_**Agent (claude-sonnet-5-5 2026-10-08 14:50:59Z)**_
+
+I redesigned https://johnpretsch.com/projects with a thumbnail on each project card. I couldn't render it here, so I haven't seen it in a browser. The page and all three images return 200, but please check how it looks.
+
+- **Style:** I copied the resume's system font stack, its blue accent and heading colors, its heavy blue rule under the header, and its small-caps section heading. Your name now links back to the resume.
+- **Cards:** the cards sit in a responsive grid, one column on phones and up to three on desktop. Each card is a single link that opens in a new tab. On hover it lifts, gets a shadow and a blue border.
+- **Thumbnails:** these are stylized illustrations, not screenshots. They're SVG files in `public/projects/img/`: a feed of article rows for News, a bar-and-line chart for Market, and a plate with a fork and knife for MyFood. I used illustrations because there's no headless browser on this server to take screenshots. If you'd rather have real screenshots, save them into `img/` and I'll point the cards at them.
+- **MyFood text:** the description is still my placeholder guess, so send me a better one when you can.
+
+Nothing is committed yet.
